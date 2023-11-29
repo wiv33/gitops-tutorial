@@ -5,7 +5,8 @@ metadata:
   namespace: tutorial
 spec:
   replicas: 1
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 2 # 기본이 10개, 10개인 경우 argocd에 너무 많이 쌓이게 된다.
+
   selector:
     matchLabels:
       app: gitops-tutorial
